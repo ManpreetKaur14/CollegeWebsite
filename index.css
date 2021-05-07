@@ -16,9 +16,28 @@ display: flex;
 padding:2% 6%;
 justify-content: space-between;
 align-items: center;
+
+/*To disable select in navbar*/
+-webkit-touch-callout: none;
+-webkit-user-select: none; 
+-khtml-user-select: none; 
+-moz-user-select: none; 
+-ms-user-select: none;
+user-select: none;
 }
+
+.nav-link{
+    /*To added selector cursor on hover*/
+    cursor: pointer;
+}
+
 nav img{
     width: 150px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 .nav-links{
     flex: 1;
