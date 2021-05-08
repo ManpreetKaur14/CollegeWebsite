@@ -14,7 +14,7 @@
     <nav>
    <a herf = "index.html"><img src ="images/logo.png" class="logo"></a>
 <div class="nav-links" id="navLinks">
-    <i class="fa fa-times" onclick="hideMenu()"></i>
+    <i class="fa fa-times" onclick="toggle()"></i>
 <ul>
     <li><a herf="" class="nav-link">HOME</a></li>
     <li><a herf="" class="nav-link">ABOUT</a></li>
@@ -23,7 +23,7 @@
     <li><a herf="" class="nav-link">CONTACT</a></li>
 </ul>
 </div>
-<i class="fa fa-bars" onclick="showMenu()"></i>
+<i class="fa fa-bars" onclick="toggle()"></i>
 </nav>
 <div class="text-box">
     <h1>
@@ -198,38 +198,19 @@
 </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
     var navLinks=document.getElementById("navLinks");
-    function showMenu(){
-        navLinks.style.right="0";
-    }
-    function hideMenu(){
-        navLinks.style.right="-200px";
+    var showing=false;
+    function toggle()
+    {
+        if(showing)
+        {
+            navLinks.style.display="none"
+            showing=false;
+        }else{
+            navLinks.style.display="block"
+            showing=true;
+        }
     }
 </script>
 </body>
